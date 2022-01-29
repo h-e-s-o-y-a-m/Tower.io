@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour {
 
     private CubePos nowCube = new CubePos(0, 1, 0);
     public float cubeChangePlaceSpeed = 0.5f;
+    public Transform cubeToPlace;
 
     private List<Vector3> allCubesPositions = new List<Vector3>{
         new Vector3(0, 0, 0),
@@ -35,15 +36,32 @@ public class GameController : MonoBehaviour {
 
     private void SpawnPositions() {
         List<Vector3> positions = new List<Vector3>();
-        if (IsPositionsEmpty(new Vector3(nowCube.x + 1, nowCube.y, nowCube.z)) {
+        if (IsPositionsEmpty(new Vector3(nowCube.x + 1, nowCube.y, nowCube.z)))
             positions.Add(new Vector3(nowCube.x + 1, nowCube.y, nowCube.z));
-        }
-    
-    
+        else if (IsPositionsEmpty(new Vector3(nowCube.x - 1, nowCube.y, nowCube.z)))
+            positions.Add(new Vector3(nowCube.x - 1, nowCube.y, nowCube.z));
+        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y +1, nowCube.z)))
+            positions.Add(new Vector3(nowCube.x, nowCube.y +1, nowCube.z));
+        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y - 1, nowCube.z)))
+            positions.Add(new Vector3(nowCube.x, nowCube.y - 1, nowCube.z));
+        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y, nowCube.z +1)))
+            positions.Add(new Vector3(nowCube.x, nowCube.y, nowCube.z +1));
+        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y, nowCube.z - 1)))
+            positions.Add(new Vector3(nowCube.x, nowCube.y, nowCube.z - 1));
+
+        cubeToPlace.position = positions[UnityEngine.Random.Range(0, positions.Count)];
     }
 
-    private bool IsPositionsEmpty(Vector3 pos) {
+    private bool IsPositionsEmpty(Vector3 targetPos) {
+        if (targetPos.y == 0)
+            return false;
 
+        foreach(Vector3 pos in allCubesPositions) {
+            if (pos.x == targetPos.x && pos.y == targetPos.y && pos.z == targetPos.z)
+                return false;
+        }
+
+        return true;
     }
 
 }
