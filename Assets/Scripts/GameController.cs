@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour {
     public float cubeChangePlaceSpeed = 0.5f;
     public Transform cubeToPlace;
 
+    public GameObject cubeToCreate, allCubes;
+    private Rigidbody allCubesRb;
+
     private List<Vector3> allCubesPositions = new List<Vector3>{
         new Vector3(0, 0, 0),
         new Vector3(1, 0, 0),
@@ -23,7 +26,31 @@ public class GameController : MonoBehaviour {
     };
 
     private void Start() {
+        allCubesRb = allCubes.GetComponent<Rigidbody>();
         StartCoroutine(ShowCubePlace());
+    }
+
+    private void Update() {
+        if(Input.GetMouseButtonDown(0) || Input.touchCount > 0) {
+#if !UNITY_EDITOR
+            if (Input.GetTouch(0).phase != TouchPhase.Began)
+                return;
+#endif 
+
+            GameObject newCube = Instantiate(
+                cubeToCreate,
+                cubeToPlace.position,
+                Quaternion.identity) as GameObject;
+
+            newCube.transform.SetParent(allCubes.transform);
+            nowCube.SetVector(cubeToPlace.position);
+            allCubesPositions.Add(nowCube.GetVector());
+
+            allCubesRb.isKinematic = true;
+            allCubesRb.isKinematic = false;
+
+            SpawnPositions();
+        }
     }
 
     IEnumerator ShowCubePlace() {
@@ -36,17 +63,23 @@ public class GameController : MonoBehaviour {
 
     private void SpawnPositions() {
         List<Vector3> positions = new List<Vector3>();
-        if (IsPositionsEmpty(new Vector3(nowCube.x + 1, nowCube.y, nowCube.z)))
+        if (IsPositionsEmpty(new Vector3(nowCube.x + 1, nowCube.y, nowCube.z))
+            && nowCube.x + 1 != cubeToPlace.position.x)
             positions.Add(new Vector3(nowCube.x + 1, nowCube.y, nowCube.z));
-        else if (IsPositionsEmpty(new Vector3(nowCube.x - 1, nowCube.y, nowCube.z)))
+        if (IsPositionsEmpty(new Vector3(nowCube.x - 1, nowCube.y, nowCube.z))
+            && nowCube.x - 1 != cubeToPlace.position.x)
             positions.Add(new Vector3(nowCube.x - 1, nowCube.y, nowCube.z));
-        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y +1, nowCube.z)))
+        if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y +1, nowCube.z))
+            && nowCube.y + 1 != cubeToPlace.position.y)
             positions.Add(new Vector3(nowCube.x, nowCube.y +1, nowCube.z));
-        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y - 1, nowCube.z)))
+        if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y - 1, nowCube.z))
+            && nowCube.y - 1 != cubeToPlace.position.y)
             positions.Add(new Vector3(nowCube.x, nowCube.y - 1, nowCube.z));
-        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y, nowCube.z +1)))
+        if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y, nowCube.z +1))
+            && nowCube.z + 1 != cubeToPlace.position.z)
             positions.Add(new Vector3(nowCube.x, nowCube.y, nowCube.z +1));
-        else if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y, nowCube.z - 1)))
+        if (IsPositionsEmpty(new Vector3(nowCube.x, nowCube.y, nowCube.z - 1))
+            && nowCube.z - 1 != cubeToPlace.position.z)
             positions.Add(new Vector3(nowCube.x, nowCube.y, nowCube.z - 1));
 
         cubeToPlace.position = positions[UnityEngine.Random.Range(0, positions.Count)];
