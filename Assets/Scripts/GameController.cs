@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour {
     public Transform cubeToPlace;
     private float camMoveToYPosition, camMoveSpeed = 2f;
 
-    public GameObject cubeToCreate, allCubes;
+    public GameObject cubeToCreate, allCubes, vfx;
     public GameObject[] canvasStartPage;
     private Rigidbody allCubesRb;
 
@@ -47,13 +47,13 @@ public class GameController : MonoBehaviour {
     }
 
     private void Update() {
-        if((Input.GetMouseButtonDown(0) || Input.touchCount > 0) && cubeToPlace != null && allCubes != null && !EventSystem.current.IsPointerOverGameObject()) {
+        if ((Input.GetMouseButtonDown(0) || Input.touchCount > 0) && cubeToPlace != null && allCubes != null && !EventSystem.current.IsPointerOverGameObject()) {
 #if !UNITY_EDITOR
             if (Input.GetTouch(0).phase != TouchPhase.Began)
                 return;
 #endif 
 
-            if(!firstCube) {
+            if (!firstCube) {
                 firstCube = true;
                 foreach (GameObject obj in canvasStartPage)
                     Destroy(obj);
@@ -68,6 +68,12 @@ public class GameController : MonoBehaviour {
             nowCube.SetVector(cubeToPlace.position);
             allCubesPositions.Add(nowCube.GetVector());
 
+            if (PlayerPrefs.GetString("music") != "No")
+                GetComponent<AudioSource>().Play();
+
+            GameObject newVfx = Instantiate(vfx, newCube.transform.position, Quaternion.identity) as GameObject;
+            Destroy(newVfx, 1.5f);
+
             allCubesRb.isKinematic = true;
             allCubesRb.isKinematic = false;
 
@@ -75,7 +81,7 @@ public class GameController : MonoBehaviour {
             MoveCameraChangeBg();
         }
 
-        if(!IsLose && allCubesRb.velocity.magnitude > 0.1f) {
+        if (!IsLose && allCubesRb.velocity.magnitude > 0.1f) {
             Destroy(cubeToPlace.gameObject);
             IsLose = true;
             StopCoroutine(showCubePlace);
@@ -145,17 +151,17 @@ public class GameController : MonoBehaviour {
             if (Mathf.Abs(Convert.ToInt32(pos.x)) > maxX)
                 maxX = Convert.ToInt32(pos.x);
 
-            if(Convert.ToInt32(pos.y) > maxY)
+            if (Convert.ToInt32(pos.y) > maxY)
                 maxY = Convert.ToInt32(pos.y);
 
-            if(Mathf.Abs(Convert.ToInt32(pos.z)) > maxZ)
+            if (Mathf.Abs(Convert.ToInt32(pos.z)) > maxZ)
                 maxZ = Convert.ToInt32(pos.z);
         }
 
         camMoveToYPosition = 5.9f + nowCube.y - 1f;
 
         maxHor = maxX > maxZ ? maxX : maxZ;
-        if(maxHor % 3 == 0 && prevCountMaxHorizontal != maxHor) {
+        if (maxHor % 3 == 0 && prevCountMaxHorizontal != maxHor) {
             mainCam.localPosition -= new Vector3(0, 0, 2.5f);
             prevCountMaxHorizontal = maxHor;
         }
