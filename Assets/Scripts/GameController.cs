@@ -160,11 +160,19 @@ public class GameController : MonoBehaviour {
             prevCountMaxHorizontal = maxHor;
         }
 
-        if (maxY >= 7)
+        if (maxY >= 21)
+            toCameraColor = bgColors[6];
+        else if (maxY >= 18)
+            toCameraColor = bgColors[5];
+        else if (maxY >= 15)
+            toCameraColor = bgColors[4];
+        else if (maxY >= 12)
+            toCameraColor = bgColors[3];
+        else if (maxY >= 9)
             toCameraColor = bgColors[2];
-        else if (maxY >= 5)
+        else if (maxY >= 6)
             toCameraColor = bgColors[1];
-        else if (maxY >= 2)
+        else if (maxY >= 3)
             toCameraColor = bgColors[0];
     }
 
