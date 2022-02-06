@@ -25,6 +25,20 @@ public class CanvasButtons : MonoBehaviour {
         Application.OpenURL("https://www.instagram.com/peoplecannotfly/");
     }
 
+    public void LoadShop() {
+        if (PlayerPrefs.GetString("music") != "No")
+            GetComponent<AudioSource>().Play();
+
+        SceneManager.LoadScene("Shop");
+    }
+    
+    public void CloseShop() {
+        if (PlayerPrefs.GetString("music") != "No")
+            GetComponent<AudioSource>().Play();
+
+        SceneManager.LoadScene("Main");
+    }
+
     public void MusicWork() {
         // Сейчас музыка выключена и её нужно включить.
         if (PlayerPrefs.GetString("music") == "No") {
