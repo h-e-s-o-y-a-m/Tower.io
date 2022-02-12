@@ -1877,6 +1877,8 @@ GameObject:
   - component: {fileID: 1713214735}
   - component: {fileID: 1713214734}
   - component: {fileID: 1713214736}
+  - component: {fileID: 1713214737}
+  - component: {fileID: 1713214738}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -2037,6 +2039,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1713214737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713214733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8b543fa22b8d24b9ff256d23fc9796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 4534533
+  _iOSGameId: 4534533
+  _testMode: 1
+--- !u!114 &1713214738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713214733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a676476df1fb870439e7a66c124f0f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1734828179
 GameObject:
   m_ObjectHideFlags: 0
