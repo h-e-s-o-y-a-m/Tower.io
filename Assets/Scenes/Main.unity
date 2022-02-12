@@ -1899,6 +1899,17 @@ MonoBehaviour:
   cubeChangePlaceSpeed: 0.5
   cubeToPlace: {fileID: 1901175698}
   scoreTxt: {fileID: 1306169762}
+  cubesToCreate:
+  - {fileID: 4250254756885531014, guid: 5ee64351d7eb17a44b65bf3fc96f54f7, type: 3}
+  - {fileID: 2335585032892685443, guid: 4ca642135f7ce0e43a933aa36339bfb6, type: 3}
+  - {fileID: 53208475413314556, guid: a0a58e4eaf9d85c4891bfaea42315588, type: 3}
+  - {fileID: 8159479455613873729, guid: 60f855b86f17e724387361bcca2d578a, type: 3}
+  - {fileID: 2495740379753680644, guid: cb5b874fc73ad5d42b575e7ebc2ec7f3, type: 3}
+  - {fileID: 6220963568512841058, guid: 7d25a5c4ca165324ea10677e4569c64c, type: 3}
+  - {fileID: 2734010129824453190, guid: 9805408efe4f83942bdbd158853f67e6, type: 3}
+  - {fileID: 8358725165564632260, guid: 5abfd81a16304cc499f508205807a92b, type: 3}
+  - {fileID: 4820136682110277079, guid: 5c4d95871db70ff43b67ae79e8627785, type: 3}
+  - {fileID: 1593178442060370894, guid: 097ade7912b9596468b625ebd63e4e99, type: 3}
   cubeToCreate: {fileID: 4250254756885531014, guid: 5ee64351d7eb17a44b65bf3fc96f54f7, type: 3}
   allCubes: {fileID: 1579289580}
   vfx: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
@@ -1915,6 +1926,7 @@ MonoBehaviour:
   - {r: 0.8392157, g: 0.7607843, b: 0.7372549, a: 0}
   - {r: 0.7529412, g: 0.8, b: 0.8, a: 0}
   - {r: 0.39607844, g: 0.69803923, b: 0.7764706, a: 0}
+  - {r: 0.9339623, g: 0.9163033, b: 0.54187435, a: 0}
 --- !u!4 &1713214735
 Transform:
   m_ObjectHideFlags: 0

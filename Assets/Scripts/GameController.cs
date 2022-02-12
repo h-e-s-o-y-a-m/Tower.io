@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour {
 
     public Text scoreTxt;
 
+    public GameObject[] cubesToCreate;
+
     public GameObject cubeToCreate, allCubes, vfx;
     public GameObject[] canvasStartPage;
     private Rigidbody allCubesRb;
@@ -40,7 +42,31 @@ public class GameController : MonoBehaviour {
     private Transform mainCam;
     private Coroutine showCubePlace;
 
+    private List<GameObject> posibleCubesToCreate = new List<GameObject>();
+
     private void Start() {
+        if (PlayerPrefs.GetInt("score") < 5)
+            posibleCubesToCreate.Add(cubesToCreate[0]);
+        else if (PlayerPrefs.GetInt("score") < 10)
+            AddPossibleCubes(2);
+        else if (PlayerPrefs.GetInt("score") < 15)
+            AddPossibleCubes(3);
+        else if (PlayerPrefs.GetInt("score") < 25)
+            AddPossibleCubes(4);
+        else if (PlayerPrefs.GetInt("score") < 35)
+            AddPossibleCubes(5);
+        else if (PlayerPrefs.GetInt("score") < 50)
+            AddPossibleCubes(6);
+        else if (PlayerPrefs.GetInt("score") < 70)
+            AddPossibleCubes(7);
+        else if (PlayerPrefs.GetInt("score") < 90)
+            AddPossibleCubes(8);
+        else if (PlayerPrefs.GetInt("score") < 110)
+            AddPossibleCubes(9);
+        else
+            AddPossibleCubes(10);
+
+
         scoreTxt.text = "<size=30><color=#D6834F>Best: </color></size> " + PlayerPrefs.GetInt("score") + "\n<size=22><color=#D6834F>Now: </color></size> 0";
         toCameraColor = Camera.main.backgroundColor;
         mainCam = Camera.main.transform;
@@ -63,8 +89,14 @@ public class GameController : MonoBehaviour {
                     Destroy(obj);
             }
 
+            GameObject createCube = null;
+            if (posibleCubesToCreate.Count == 1)
+                createCube = posibleCubesToCreate[0];
+            else
+                createCube = posibleCubesToCreate[UnityEngine.Random.Range(0, posibleCubesToCreate.Count)];
+
             GameObject newCube = Instantiate(
-                cubeToCreate,
+                createCube,
                 cubeToPlace.position,
                 Quaternion.identity) as GameObject;
 
@@ -178,6 +210,8 @@ public class GameController : MonoBehaviour {
         }
 
         if (maxY >= 21)
+            toCameraColor = bgColors[7];
+        else if (maxY >= 21)
             toCameraColor = bgColors[6];
         else if (maxY >= 18)
             toCameraColor = bgColors[5];
@@ -191,6 +225,11 @@ public class GameController : MonoBehaviour {
             toCameraColor = bgColors[1];
         else if (maxY >= 3)
             toCameraColor = bgColors[0];
+    }
+
+    private void AddPossibleCubes(int till) {
+        for (int i = 0; i < till; i++)
+            posibleCubesToCreate.Add(cubesToCreate[i]);
     }
 
 }

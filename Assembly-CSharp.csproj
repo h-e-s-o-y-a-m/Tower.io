@@ -57,11 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\IsEnabled.cs" />
     <Compile Include="Assets\Scripts\CanvasButtons.cs" />
     <Compile Include="Assets\Scripts\ExplodeCubes.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\RotateCamera.cs" />
-    <Compile Include="Assets\Scripts\IsEnabled.cs" />
+    <Compile Include="Assets\Scripts\AdsInitializer.cs" />
+    <Compile Include="Assets\Scripts\Ads.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
@@ -705,6 +707,12 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
