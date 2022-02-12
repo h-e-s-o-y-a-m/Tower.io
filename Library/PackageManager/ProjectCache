@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637802940631552084
-    m_Hash: 1193238569
+      ticks: 637802967864636270
+    m_Hash: 594542765
   m_LockFileStatus:
     m_FilePath: C:/Project_Tower.io/Tower.io/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637802940678818661
-    m_Hash: 2758512085
+      ticks: 637802967864727506
+    m_Hash: 3555952186
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -378,6 +378,123 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: e1ff2896b994f5eb1cc6bec519c643b3e2cd32ec
+        path: 
+    - packageId: com.unity.adaptiveperformance@2.2.3
+      testable: 0
+      isDirectDependency: 1
+      version: 2.2.3
+      source: 1
+      resolvedPath: C:\Project_Tower.io\Tower.io\Library\PackageCache\com.unity.adaptiveperformance@2.2.3
+      assetPath: Packages/com.unity.adaptiveperformance
+      name: com.unity.adaptiveperformance
+      displayName: Adaptive Performance
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'The Adaptive Performance package provides an API to get feedback
+        about the thermal and power state of mobile devices, enabling applications
+        to make performance-relevant adaptions at runtime.
+
+
+        For instruction
+        on how to use samples, please read the documentation.
+
+
+        By installing
+        this package, you agree to the terms and conditions of the Unity End User
+        License Agreement found under "View licenses" above.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.2.0-preview.1
+        - 1.0.0
+        - 1.0.1
+        - 1.1.0-preview.2
+        - 1.1.0-preview.3
+        - 1.1.0-preview.4
+        - 1.1.0-preview.5
+        - 1.1.0-preview.7
+        - 1.1.0
+        - 1.1.6
+        - 1.1.9
+        - 1.1.10
+        - 1.2.0
+        - 1.2.2
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
+        - 2.0.0-preview.4
+        - 2.0.0-preview.7
+        - 2.0.0-preview.8
+        - 2.0.0-preview.9
+        - 2.0.0-preview.10
+        - 2.0.0-preview.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
+        - 2.1.0
+        - 2.1.1
+        - 2.2.1
+        - 2.2.3
+        - 3.0.0-pre.2
+        - 3.0.0
+        - 3.0.2
+        - 4.0.0-pre.1
+        - 4.0.0
+        compatible:
+        - 2.2.1
+        - 2.2.3
+        verified: 2.2.3
+      dependencies:
+      - name: com.unity.subsystemregistration
+        version: 1.1.0
+      resolvedDependencies:
+      - name: com.unity.subsystemregistration
+        version: 1.1.0
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      keywords:
+      - mobile
+      - adaptive
+      - performance
+      - utility
+      - utilities
+      - core
+      - samsung
+      - ap
+      - provider
+      - subsystem
+      - indexer
+      - scaler
+      - vrr
+      - boost
+      - profiles
+      - cluster
+      - clusterinfo
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637794089820000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.adaptiveperformance.git
+        revision: 8266f908018aaf15bba37ff8b585bfa06aec3ea8
         path: 
     - packageId: com.unity.ads@4.0.0
       testable: 0
@@ -3370,6 +3487,65 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
         revision: 4cd880d4fd5c60597629249bf4f324e4c8d7aa2e
+        path: 
+    - packageId: com.unity.subsystemregistration@1.1.0
+      testable: 0
+      isDirectDependency: 0
+      version: 1.1.0
+      source: 1
+      resolvedPath: C:\Project_Tower.io\Tower.io\Library\PackageCache\com.unity.subsystemregistration@1.1.0
+      assetPath: Packages/com.unity.subsystemregistration
+      name: com.unity.subsystemregistration
+      displayName: Subsystem Registration
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Provides internal registration mechanism for standalone subsystems. 
+        It allows a standalone subsystem to inform the Subsystem Manager of its existence.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.6
+        - 1.1.0
+        compatible:
+        - 1.0.6
+        - 1.1.0
+        verified: 1.1.0
+      dependencies:
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      keywords:
+      - subsystem
+      - registration
+      - internal
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.subsystemregistration.git
+        revision: 72584ba5248fbe79e560e795ad819f876954fceb
         path: 
     - packageId: com.unity.mathematics@1.1.0
       testable: 0
