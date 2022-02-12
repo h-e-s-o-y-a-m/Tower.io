@@ -91,43 +91,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1566}
+      Script: {instanceID: 1600}
     - Class: 114
-      Script: {instanceID: 1924}
+      Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 2302}
+      Script: {instanceID: 2376}
     - Class: 114
-      Script: {instanceID: 2342}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2574}
+      Script: {instanceID: 2662}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2832}
     - Class: 114
-      Script: {instanceID: 2908}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3132}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3378}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 3508}
+      Script: {instanceID: 3640}
     - Class: 114
-      Script: {instanceID: 3872}
+      Script: {instanceID: 4022}
     - Class: 114
-      Script: {instanceID: 4702}
+      Script: {instanceID: 4824}
     - Class: 114
-      Script: {instanceID: 4708}
+      Script: {instanceID: 4900}
     - Class: 114
-      Script: {instanceID: 5166}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 5626}
+      Script: {instanceID: 5386}
     - Class: 114
-      Script: {instanceID: 5816}
+      Script: {instanceID: 5472}
     - Class: 114
-      Script: {instanceID: 27180}
+      Script: {instanceID: 5858}
     - Class: 114
-      Script: {instanceID: 28196}
+      Script: {instanceID: 6054}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -184,35 +184,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1566}
+      Script: {instanceID: 1600}
     - Class: 114
-      Script: {instanceID: 1924}
+      Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 2170}
+      Script: {instanceID: 2238}
     - Class: 114
-      Script: {instanceID: 2302}
+      Script: {instanceID: 2376}
     - Class: 114
-      Script: {instanceID: 2342}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2574}
+      Script: {instanceID: 2662}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2832}
     - Class: 114
-      Script: {instanceID: 2908}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3132}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3378}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 3508}
+      Script: {instanceID: 3640}
     - Class: 114
-      Script: {instanceID: 4708}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 5166}
+      Script: {instanceID: 5386}
     - Class: 114
-      Script: {instanceID: 5626}
+      Script: {instanceID: 5858}
     - Class: 114
-      Script: {instanceID: 5816}
+      Script: {instanceID: 6054}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -388,6 +388,12 @@ ScriptsOnlyBuild:
     className: PostProcessLayer
   - hash:
       serializedVersion: 2
+      Hash: a325152ad9563ed900af221c132fea36
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: CoroutineExecutor
+  - hash:
+      serializedVersion: 2
       Hash: eb8f760171b823a3ddb63d917c9c2d05
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -434,6 +440,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
@@ -575,6 +587,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: ApplicationQuit
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
@@ -584,6 +602,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 88e2c6f501bf5dead831a3e44c30de40
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Platform.Editor
+    className: BannerPlaceholder
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -688,6 +712,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
+      Hash: 075b868be727bd5f579fd72d2e2cc3b9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AdsInitializer
+  - hash:
+      serializedVersion: 2
       Hash: b424b4eeb810aecb0ff91c62639241e9
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -790,6 +820,12 @@ ScriptsOnlyBuild:
     className: MotionBlur
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Ads
+  - hash:
+      serializedVersion: 2
       Hash: b13de7a0a457cb8e026d4237dc1b5797
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -866,45 +902,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: AmbientOcclusion
-  - hash:
-      serializedVersion: 2
-      Hash: a325152ad9563ed900af221c132fea36
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Utilities
-    className: CoroutineExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Utilities
-    className: ApplicationQuit
-  - hash:
-      serializedVersion: 2
-      Hash: 88e2c6f501bf5dead831a3e44c30de40
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Platform.Editor
-    className: BannerPlaceholder
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: Placeholder
-  - hash:
-      serializedVersion: 2
-      Hash: 075b868be727bd5f579fd72d2e2cc3b9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AdsInitializer
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Ads
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Shop.unity
   playerPath: "C:/Users/79778/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/project_tower.apk"
+    \u0441\u0442\u043E\u043B/project_tower_v0.1.1.apk"

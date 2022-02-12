@@ -83,6 +83,9 @@ public class GameController : MonoBehaviour {
                 return;
 #endif 
 
+            if (EventSystem.current.currentSelectedGameObject)
+                return;
+
             if (!firstCube) {
                 firstCube = true;
                 foreach (GameObject obj in canvasStartPage)
